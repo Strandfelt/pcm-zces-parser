@@ -18,14 +18,14 @@ them convert to JSON and back to identical data.
 ## Install
 
 ```powershell
-python -m pip install "git+https://github.com/Strandfelt/pcm-zces-parser.git"
+python -m pip install "git+https://github.com/Strandfelt/pcm-zces-parser.git@v0.1.0"
 ```
 
 Python 3.12 or later. No dependencies. To take elevation and race points from
 the stage's `.cds` file (recommended), install the `cds` extra:
 
 ```powershell
-python -m pip install "pcm-zces-parser[cds] @ git+https://github.com/Strandfelt/pcm-zces-parser.git"
+python -m pip install "pcm-zces-parser[cds] @ git+https://github.com/Strandfelt/pcm-zces-parser.git@v0.1.0"
 ```
 
 ## Command line
