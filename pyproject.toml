@@ -18,9 +18,6 @@ classifiers = [
     "Topic :: Scientific/Engineering :: GIS",
 ]
 
-[project.optional-dependencies]
-cds = ["pcm-cds-profile @ git+https://github.com/Strandfelt/pcm-cds-profile.git@v0.1.0"]
-
 [project.urls]
 Homepage = "https://github.com/Strandfelt/pcm-zces-parser"
 Issues = "https://github.com/Strandfelt/pcm-zces-parser/issues"

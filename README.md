@@ -18,14 +18,16 @@ them convert to JSON and back to identical data.
 ## Install
 
 ```powershell
-python -m pip install "git+https://github.com/Strandfelt/pcm-zces-parser.git@v0.1.0"
+python -m pip install pcm-zces-parser
 ```
 
 Python 3.12 or later. No dependencies. To take elevation and race points from
-the stage's `.cds` file (recommended), install the `cds` extra:
+the stage's `.cds` file (recommended), also install
+[pcm-cds-profile](https://github.com/Strandfelt/pcm-cds-profile); it is picked
+up automatically:
 
 ```powershell
-python -m pip install "pcm-zces-parser[cds] @ git+https://github.com/Strandfelt/pcm-zces-parser.git@v0.1.0"
+python -m pip install "git+https://github.com/Strandfelt/pcm-cds-profile.git@v0.1.0"
 ```
 
 ## Command line
@@ -168,7 +170,7 @@ the game uses a different zlib build; the decompressed data is identical.
 ## Development
 
 ```powershell
-python -m pip install -e ".[cds]"
+python -m pip install -e . "git+https://github.com/Strandfelt/pcm-cds-profile.git@v0.1.0"
 python -m unittest discover -s tests -v
 ```
 

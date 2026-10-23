@@ -40,7 +40,8 @@ def load_stage(zces_path, cds='auto'):
     elif cds:
         data = read_cds_file(cds)
         if data is None:
-            raise ImportError('reading a .cds file needs pcm-cds-profile (pip install pcm-zces-parser[cds])')
+            raise ImportError('reading a .cds file needs pcm-cds-profile: '
+                              'pip install "git+https://github.com/Strandfelt/pcm-cds-profile.git@v0.1.0"')
     view = stage_view(read_zces(zces_path), data)
     view['source_file'] = zces_path.name
     return view
