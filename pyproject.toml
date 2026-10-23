@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcm-zces-parser"
+version = "0.1.0"
+description = "Read, write and visualise Pro Cycling Manager .zces stage files"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = []
+keywords = ["pro-cycling-manager", "pcm", "zces", "stage", "gpx", "geojson", "elevation-profile"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+
+[project.optional-dependencies]
+cds = ["pcm-cds-profile @ git+https://github.com/Strandfelt/pcm-cds-profile.git@v0.1.0"]
+
+[project.urls]
+Homepage = "https://github.com/Strandfelt/pcm-zces-parser"
+Issues = "https://github.com/Strandfelt/pcm-zces-parser/issues"
+
+[project.scripts]
+pcm-zces = "pcm_zces_parser.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pcm_zces_parser*"]
